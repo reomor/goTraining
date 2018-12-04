@@ -20,6 +20,7 @@ func main() {
 
 	c := make([]string, len(s))
 	copy(c, s)
+	fmt.Println("cpy is: ", c)
 
 	l := s[2:5]
 	fmt.Println("l = s[2,5] is: ", l)
@@ -29,4 +30,17 @@ func main() {
 
 	l = s[2:]
 	fmt.Println("l = s[2: is: ", l)
+
+	t := []string{"x", "y", "z"}
+	fmt.Println("static init: ", t)
+
+	twoD := make([][]int, 3)
+	for i := 0; i < len(twoD); i++ {
+		innerLen := i + 1
+		twoD[i] = make([]int, innerLen)
+		for j := 0; j < innerLen; j++ {
+			twoD[i][j] = i + j + 1
+		}
+	}
+	fmt.Println("2d arr: ", twoD)
 }
