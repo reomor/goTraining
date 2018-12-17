@@ -13,3 +13,8 @@ go run hello-world.go
 go build hello-world.go
 ./hello-world
 ```
+
+git
+```
+git checkout -b test <name of remote>/test
+```

@@ -21,5 +21,5 @@ func main() {
 
 	rPointer := &r
 	fmt.Println("area: ", rPointer.area())
-	fmt.Println("perim: ", rPointer.perim())
+	fmt.Println("perimeter: ", rPointer.perim())
 }
