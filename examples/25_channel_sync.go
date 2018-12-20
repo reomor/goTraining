@@ -5,15 +5,15 @@ import (
 	"time"
 )
 
-func worker(done_channel chan bool) {
+func worker(doneChannel chan bool) {
 	fmt.Print("working ... ")
 	time.Sleep(time.Second * 3)
 	fmt.Println("done")
-	done_channel <- true
+	doneChannel <- true
 }
 
 func main() {
-	done_channel := make(chan bool, 1)
-	go worker(done_channel)
-	<-done_channel
+	doneChannel := make(chan bool, 1)
+	go worker(doneChannel)
+	<-doneChannel
 }
