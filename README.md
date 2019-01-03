@@ -11,6 +11,7 @@ useful commands
 ```go
 go run hello-world.go
 go build hello-world.go
+time go run worker-pools.go
 ./hello-world
 ```
 
